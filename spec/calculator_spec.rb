@@ -1,4 +1,5 @@
 require 'calculator'
+
   describe Calculator do
     describe '#add' do
       it 'adds two numbers' do
@@ -32,5 +33,14 @@ describe Answer do
       expect(subject.print_answer(Float::INFINITY)).to eq "The Answer is: Infinity"
     end
   end
+  
+  it { is_expected.to respond_to :number1 }
+  it { is_expected.to respond_to :number2 }
+  it { is_expected.to respond_to :function }
+  
+  it { is_expected.to respond_to :calc }
+  it 'should ask for user input'
+    
+
 end
 
